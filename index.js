@@ -39,13 +39,24 @@ app.post("/payment/create", async (req, res) => {
     });
   }
 });
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT, (err) => {
+  if (err) throw err;
+
+  console.log(`Amazon Server Running on PORT: ${PORT}`);
+});
 
 // Server listen
-app.listen(5001, (err) => {
-  if (err) throw err;
-  console.log("Amazon Server Running on PORT: 5001,  http://localhost:5001");
+// app.listen(5001, (err) =>
+//   const PORT = process.env.PORT || 5001;
+// app.listen(PORT, (err) => {
 
-});
+//   {
+//   if (err) throw err;
+// console.log("Amazon Server Running on PORT: 5001,  http://localhost:5001");
+// console.log(`Amazon Server Running on PORT: ${PORT}`);
+// });
 
 // const express = require("express");
 // const cors = require("cors");
